@@ -1,0 +1,16 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(function() {
+    $.ajax({
+      type: "GET",
+      url: "/api/hello",
+      success: function(data) {
+        console.log(data);
+        $('#dynamic-content').text(data);
+      },
+      error: function(err) {
+        console.error("API request failed", err);
+      }
+    });
+  });
+</script>
